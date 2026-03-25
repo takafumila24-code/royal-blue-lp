@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>合同会社ロイヤルブルー | 企業の階級を引き上げる</title>
-  <meta name="description" content="合同会社ロイヤルブルーは、戦略・営業・AIを統合し、企業を勝つ側に固定するための設計会社です。" />
+  <title>合同会社ロイヤルブルー | 企業の階級を引き上げる設計会社</title>
+  <meta name="description" content="合同会社ロイヤルブルーは、戦略・営業・DX・AIを統合し、企業の利益構造と格を引き上げる設計会社です。" />
   <style>
     :root{
       --navy:#071428;
@@ -13,9 +13,8 @@
       --gold:#c9a84c;
       --gold-soft:#e2c978;
       --white:#f7f8fb;
+      --muted:rgba(247,248,251,.74);
       --line:rgba(201,168,76,.22);
-      --text:rgba(247,248,251,.92);
-      --muted:rgba(247,248,251,.72);
       --shadow:0 20px 60px rgba(0,0,0,.28);
       --max:1180px;
     }
@@ -28,13 +27,13 @@
         radial-gradient(circle at top right, rgba(201,168,76,.08), transparent 22%),
         radial-gradient(circle at left center, rgba(201,168,76,.05), transparent 18%),
         linear-gradient(180deg, var(--navy) 0%, #08192f 100%);
-      color:var(--text);
+      color:var(--white);
       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP",sans-serif;
       line-height:1.85;
       letter-spacing:.02em;
     }
 
-    a{color:inherit;text-decoration:none}
+    a{text-decoration:none;color:inherit}
     .container{width:min(calc(100% - 32px), var(--max));margin:0 auto}
     .section{padding:88px 0}
     .section-tight{padding:64px 0}
@@ -128,21 +127,20 @@
       letter-spacing:.18em;
       text-transform:uppercase;
       color:var(--gold-soft);
-      opacity:.95;
     }
 
     .hero h1{
       margin:0 auto 18px;
-      max-width:900px;
-      font-size:clamp(34px,6vw,68px);
-      line-height:1.18;
+      max-width:920px;
+      font-size:clamp(34px,6vw,70px);
+      line-height:1.15;
       font-weight:900;
       letter-spacing:.03em;
       text-align:center;
     }
 
     .hero p{
-      max-width:760px;
+      max-width:780px;
       margin:0 auto;
       text-align:center;
       font-size:clamp(16px,2vw,21px);
@@ -211,9 +209,9 @@
       margin-top:36px;
     }
 
-    .grid-3{
+    .grid-4{
       display:grid;
-      grid-template-columns:repeat(3,1fr);
+      grid-template-columns:repeat(4,1fr);
       gap:22px;
       margin-top:36px;
     }
@@ -266,41 +264,19 @@
       color:var(--gold-soft);
     }
 
-    .process{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:18px;
-      margin-top:36px;
-    }
-
-    .step{
-      padding:24px;
+    .company-box{
+      max-width:900px;
+      margin:36px auto 0;
+      padding:30px 28px;
       border:1px solid var(--line);
-      border-radius:22px;
+      border-radius:24px;
       background:rgba(255,255,255,.025);
+      box-shadow:var(--shadow);
     }
 
-    .step-num{
-      width:42px;
-      height:42px;
-      margin:0 auto 14px;
-      border-radius:50%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      background:rgba(201,168,76,.12);
-      color:var(--gold-soft);
-      font-weight:900;
-      border:1px solid rgba(201,168,76,.22);
-    }
-
-    .service-link{
-      display:inline-flex;
-      margin-top:18px;
-      color:var(--gold-soft);
-      font-weight:700;
-      border-bottom:1px solid rgba(201,168,76,.35);
-      padding-bottom:2px;
+    .company-box p{
+      margin:8px 0;
+      text-align:left;
     }
 
     .cta-wrap{
@@ -330,7 +306,7 @@
     }
 
     @media (max-width: 960px){
-      .grid-2,.grid-3,.process{
+      .grid-2,.grid-4{
         grid-template-columns:1fr;
       }
 
@@ -354,10 +330,10 @@
         <div class="brand-ja">合同会社ロイヤルブルー</div>
       </div>
       <nav class="nav">
-        <a href="#philosophy">思想</a>
-        <a href="#value">提供価値</a>
+        <a href="#about">思想</a>
+        <a href="#service">事業内容</a>
         <a href="#royal-ai">Royal AI</a>
-        <a href="#contact" class="btn btn-primary">無料診断</a>
+        <a href="#company">会社情報</a>
       </nav>
     </div>
   </header>
@@ -365,22 +341,22 @@
   <main>
     <section class="hero">
       <div class="container">
-        <div class="eyebrow">Strategy / Sales / Execution / Royal AI</div>
+        <div class="eyebrow">Strategy / Sales / DX / Royal AI</div>
         <h1>企業の階級を引き上げる。</h1>
         <p>
-          戦略・営業・AIを統合し、<br>
-          企業を<span class="gold">“勝つ側”に固定する</span>ための設計会社。
+          合同会社ロイヤルブルーは、戦略・営業・DX・AIを統合し、<br>
+          企業の<span class="gold">利益構造と格</span>を引き上げる設計会社です。
         </p>
         <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary">無料診断はこちら</a>
-          <a href="#royal-ai" class="btn btn-secondary">Royal AIを見る</a>
+          <a href="#royal-ai" class="btn btn-primary">Royal AIを見る</a>
+          <a href="#company" class="btn btn-secondary">会社情報</a>
         </div>
         <div class="hero-note">選ばれる企業ではなく、選ぶ企業へ。</div>
         <div class="crest-line"></div>
       </div>
     </section>
 
-    <section id="philosophy" class="section">
+    <section id="about" class="section">
       <div class="container">
         <h2>市場は平等ではない。</h2>
         <p class="statement">
@@ -400,212 +376,113 @@
 
     <section class="section-tight">
       <div class="container">
-        <h2>私たちは“支援会社”ではありません。</h2>
+        <h2>私たちの立ち位置</h2>
         <div class="bullet">
           <div class="bullet-item">
             <strong>AI会社でもない。</strong><br>
-            ツールを売ることが目的ではありません。
+            ツール販売だけを目的としていません。
           </div>
           <div class="bullet-item">
             <strong>コンサル会社でもない。</strong><br>
-            綺麗な提案書だけで終わる立場ではありません。
+            提案書だけを出して終わる立場ではありません。
           </div>
           <div class="bullet-item">
             <strong>営業代行でもない。</strong><br>
-            単発で人を動かすだけの会社でもありません。
+            単発で人を動かすだけの会社ではありません。
           </div>
           <div class="bullet-item">
             <strong>ロイヤルブルーは、企業の勝ち方を設計する会社です。</strong><br>
-            経営・営業・現場を横断し、利益が残る構造を再設計します。
+            経営・営業・現場を横断し、利益が残る構造へ再設計します。
           </div>
         </div>
       </div>
     </section>
 
-    <section id="value" class="section">
+    <section id="service" class="section">
       <div class="container">
-        <h2>提供するのは“結果の出る構造”</h2>
+        <h2>事業内容</h2>
         <p class="lead">
-          私たちが扱うのは、表面的な改善ではありません。<br>
-          勝ち続けるための土台そのものです。
+          ロイヤルブルーは、企業の利益を上げるための“構造”を設計します。
         </p>
 
-        <div class="grid-2">
+        <div class="grid-4">
           <div class="card">
-            <h3>利益構造の再設計</h3>
+            <h3>営業支援</h3>
             <p>
-              どこで利益が生まれ、どこで損失が出ているのかを見抜き、
-              事業全体の収益構造を再設計します。
+              営業導線・提案内容・アプローチの設計を通じて、
+              売上につながる営業体制を整えます。
             </p>
           </div>
           <div class="card">
-            <h3>営業の再構築</h3>
+            <h3>コスト削減支援</h3>
             <p>
-              売れる企業は、営業を感覚で回していません。
-              提案・導線・クロージングまで、勝ち筋を設計します。
+              固定費や運用コストの見直しを行い、
+              利益が残る構造づくりを支援します。
             </p>
           </div>
           <div class="card">
-            <h3>事業モデルの進化</h3>
+            <h3>DX支援</h3>
             <p>
-              既存の延長線ではなく、次のステージへ進むための構造転換を支援します。
+              属人化した業務を整理し、
+              仕組みで回る業務設計へ移行します。
             </p>
           </div>
           <div class="card">
-            <h3>組織レベルの引き上げ</h3>
+            <h3>AI導入支援</h3>
             <p>
-              属人化から脱却し、再現性ある運用へ。
-              人と仕組みの両方を整えます。
+              Royal AIを通じて、企業ごとに最適なAIを
+              オーダーメイドで実装します。
             </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section-tight">
+    <section id="royal-ai" class="section-tight">
       <div class="container">
-        <h2>ロイヤルブルーの定義</h2>
+        <h2>Royal AI</h2>
+        <p class="lead">
+          Royal AIは、合同会社ロイヤルブルーと連携したAIソリューションサービスです。<br>
+          既製品ではなく、業種・課題・現場に合わせて仕立てる
+          <span class="gold">高級オーダー型AI</span>として提供しています。
+        </p>
+
         <div class="quote-box">
           <div class="main">
-            企業を支える会社ではなく、<br>
-            <span class="gold">企業の格そのものを引き上げる会社。</span>
+            AIを、御社仕様に仕立てる。
           </div>
+        </div>
+
+        <div class="hero-actions">
+          <a href="royal-ai.html" class="btn btn-primary">Royal AI詳細を見る</a>
         </div>
       </div>
     </section>
 
-    <section id="royal-ai" class="section">
+    <section id="company" class="section">
       <div class="container">
-        <h2>その設計を実行するのが、Royal AI</h2>
-        <p class="lead">
-          Royal AIは、ロイヤルブルーの設計思想を実務に落とし込むための実行装置です。<br>
-          AIは主役ではなく、勝つための再現性を作るための手段です。
-        </p>
+        <h2>会社情報</h2>
 
-        <div class="grid-3">
-          <div class="card">
-            <h3>営業提案AI</h3>
-            <p>
-              企業ごとの提案内容を高速で整理し、営業の精度と速度を引き上げます。
-            </p>
-          </div>
-          <div class="card">
-            <h3>分析・可視化AI</h3>
-            <p>
-              売れ筋や改善ポイントを可視化し、意思決定の質を高めます。
-            </p>
-          </div>
-          <div class="card">
-            <h3>業務自動化AI</h3>
-            <p>
-              定型業務を自動化し、人が本来集中すべき仕事へ時間を戻します。
-            </p>
-          </div>
-        </div>
-
-        <div class="center">
-          <a href="royal-ai.html" class="service-link">Royal AIの詳細ページを見る</a>
+        <div class="company-box">
+          <p><strong>会社名：</strong>合同会社ロイヤルブルー</p>
+          <p><strong>英語表記：</strong>Royal Blue LLC.</p>
+          <p><strong>事業領域：</strong>営業支援 / コスト削減支援 / DX支援 / AI導入支援</p>
+          <p><strong>主力サービス：</strong>Royal AI</p>
         </div>
       </div>
     </section>
 
     <section class="section-tight">
-      <div class="container">
-        <h2>なぜ実現できるのか</h2>
-        <div class="grid-2">
-          <div class="card">
-            <h3>経営・営業・現場を横断する視点</h3>
-            <p>
-              机上の理論ではなく、現場で回るかどうかまで前提に設計します。
-            </p>
-          </div>
-          <div class="card">
-            <h3>フェルミ思考による意思決定</h3>
-            <p>
-              不確実な状況でも前に進めるために、実務ベースで打ち手を具体化します。
-            </p>
-          </div>
-          <div class="card">
-            <h3>スピード重視の実行</h3>
-            <p>
-              遅い正解ではなく、早く動ける強い設計を優先します。
-            </p>
-          </div>
-          <div class="card">
-            <h3>導入後の改善まで伴走</h3>
-            <p>
-              入れて終わりではなく、使われ続ける状態まで見届けます。
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <h2>すべての企業のためではありません</h2>
-        <p class="lead">
-          ロイヤルブルーが向き合うのは、覚悟のある企業だけです。
-        </p>
-
-        <div class="bullet">
-          <div class="bullet-item">
-            <strong>本気で変わりたい企業</strong><br>
-            ただ情報収集するだけでなく、実際に変化を起こしたい企業。
-          </div>
-          <div class="bullet-item">
-            <strong>次のステージを目指す企業</strong><br>
-            現状維持ではなく、もう一段上に行きたい経営者。
-          </div>
-          <div class="bullet-item">
-            <strong>意思決定ができる企業</strong><br>
-            良い設計を、良いタイミングで実行できる企業。
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-tight">
-      <div class="container">
-        <h2>導入の流れ</h2>
-        <div class="process">
-          <div class="step center">
-            <div class="step-num">01</div>
-            <h3>無料診断</h3>
-            <p>現状の課題と伸びしろを整理します。</p>
-          </div>
-          <div class="step center">
-            <div class="step-num">02</div>
-            <h3>戦略設計</h3>
-            <p>勝ち筋と優先順位を明確化します。</p>
-          </div>
-          <div class="step center">
-            <div class="step-num">03</div>
-            <h3>実装</h3>
-            <p>必要に応じてRoyal AIを組み込みます。</p>
-          </div>
-          <div class="step center">
-            <div class="step-num">04</div>
-            <h3>改善・拡張</h3>
-            <p>成果を見ながら運用を最適化します。</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
       <div class="container">
         <div class="cta-wrap">
-          <h2>まずは現状を可視化してください</h2>
+          <h2>まずはRoyal AIからご覧ください</h2>
           <p class="lead" style="max-width:700px;">
-            いきなり導入を決める必要はありません。<br>
-            まずは、どこに勝ち筋があり、どこに無駄があるのかを整理するところから始めましょう。
+            ロイヤルブルーの設計思想を実行に落とし込むサービスがRoyal AIです。<br>
+            営業・業務・意思決定の質を引き上げたい企業様は、こちらをご覧ください。
           </p>
           <div class="hero-actions">
-            <a href="https://line.me/" class="btn btn-primary">無料診断を申し込む</a>
-            <a href="royal-ai.html" class="btn btn-secondary">Royal AI詳細を見る</a>
+            <a href="royal-ai.html" class="btn btn-primary">Royal AI詳細ページへ</a>
           </div>
-          <div class="hero-note">※ LINEリンクは後から正式URLに差し替えてください</div>
         </div>
       </div>
     </section>
@@ -615,7 +492,7 @@
     <div class="container">
       <p>合同会社ロイヤルブルー</p>
       <p>Royal Blue LLC.</p>
-      <p>企業の階級を引き上げるための設計会社</p>
+      <p>企業の階級を引き上げる設計会社</p>
     </div>
   </footer>
 

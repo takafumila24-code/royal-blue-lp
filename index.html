@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Royal Blue LLC. | 売上支援・コスト削減・人材育成</title>
+  <meta name="description" content="Royal Blue LLC.は、中小企業向けに売上支援・コスト削減・人材育成を一気通貫で支援します。戦略だけで終わらず、実行まで伴走します。" />
+  <style>
+    :root{
+      --navy:#071428;
+      --navy-2:#0d1d33;
+      --gold:#c9a84c;
+      --gold-soft:#e5d29a;
+      --white:#ffffff;
+      --gray:#c9d2df;
+      --line:rgba(201,168,76,0.28);
+      --max:1120px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP",sans-serif;
+      background:var(--navy);
+      color:var(--white);
+      line-height:1.75;
+      letter-spacing:.02em;
+    }
+
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+
+    .container{
+      width:min(100% - 32px, var(--max));
+      margin:0 auto;
+    }
+
+    .section{
+      padding:72px 0;
+    }
+
+    .section-dark{
+      background:linear-gradient(180deg, var(--navy) 0%, #081a30 100%);
+    }
+
+    .section-soft{
+      background:linear-gradient(180deg, #0a1830 0%, #0d1d33 100%);
+    }
+
+    .eyebrow{
+      color:var(--gold-soft);
+      font-size:13px;
+      font-weight:700;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      margin-bottom:14px;
+    }
+
+    h1,h2,h3{
+      margin:0 0 16px;
+      line-height:1.3;
+    }
+
+    h1{
+      font-size:clamp(34px, 5vw, 60px);
+      font-weight:800;
+      letter-spacing:.03em;
+    }
+
+    h2{
+      font-size:clamp(26px, 4vw, 40px);
+      font-weight:800;
+      color:var(--gold-soft);
+      text-align:center;
+    }
+
+    h3{
+      font-size:20px;
+      color:var(--gold-soft);
+      font-weight:700;
+    }
+
+    p{
+      margin:0 0 14px;
+      color:#e8edf5;
+    }
+
+    .lead{
+      font-size:clamp(16px, 2.3vw, 20px);
+      color:#eef3fb;
+    }
+
+    .muted{
+      color:var(--gray);
+    }
+
+    .header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter:blur(10px);
+      background:rgba(7,20,40,.82);
+      border-bottom:1px solid rgba(201,168,76,.12);
+    }
+
+    .header-inner{
+      min-height:72px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+    }
+
+    .brand{
+      display:flex;
+      flex-direction:column;
+      gap:2px;
+    }
+
+    .brand-en{
+      font-size:18px;
+      font-weight:800;
+      color:var(--gold-soft);
+      letter-spacing:.04em;
+    }
+
+    .brand-ja{
+      font-size:12px;
+      color:var(--gray);
+    }
+
+    .nav{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    .nav a{
+      font-size:14px;
+      color:#e8edf5;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:52px;
+      padding:0 24px;
+      border-radius:999px;
+      font-weight:800;
+      transition:.2s ease;
+      border:1px solid transparent;
+    }
+
+    .btn-primary{
+      background:var(--gold);
+      color:var(--navy);
+      box-shadow:0 10px 30px rgba(201,168,76,.18);
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-1px);
+      opacity:.96;
+    }
+
+    .btn-secondary{
+      border-color:var(--line);
+      color:var(--white);
+      background:transparent;
+    }
+
+    .hero{
+      padding:88px 0 72px;
+      background:
+        radial-gradient(circle at top right, rgba(201,168,76,.10), transparent 28%),
+        radial-gradient(circle at left center, rgba(201,168,76,.06), transparent 24%),
+        linear-gradient(180deg, #071428 0%, #08192f 100%);
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:40px;
+      align-items:center;
+    }
+
+    .hero-copy{
+      max-width:720px;
+    }
+
+    .hero-title span{
+      color:var(--gold);
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-top:28px;
+    }
+
+    .hero-points{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+      margin-top:34px;
+    }
+
+    .mini-card{
+      padding:16px 14px;
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(201,168,76,.14);
+      border-radius:16px;
+    }
+
+    .mini-card strong{
+      display:block;
+      color:var(--gold-soft);
+      font-size:15px;
+      margin-bottom:4px;
+    }
+
+    .hero-panel{
+      background:linear-gradient(180deg, rgba(255,255,255,.03) 0%, rgba(255,255,255,.02) 100%);
+      border:1px solid rgba(201,168,76,.18);
+      border-radius:24px;
+      padding:28px;
+      box-shadow:0 20px 60px rgba(0,0,0,.22);
+    }
+
+    .hero-panel-title{
+      font-size:14px;
+      color:var(--gold-soft);
+      font-weight:800;
+      letter-spacing:.08em;
+      margin-bottom:16px;
+      text-transform:uppercase;
+    }
+
+    .hero-list{
+      display:grid;
+      gap:12px;
+    }
+
+    .hero-list div{
+      padding:14px 16px;
+      border-radius:14px;
+      background:rgba(201,168,76,.06);
+      border:1px solid rgba(201,168,76,.14);
+      color:#f5f7fb;
+      font-weight:600;
+    }
+
+    .center-text{
+      text-align:center;
+      max-width:760px;
+      margin:0 auto 32px;
+    }
+
+    .issues{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+      margin-top:30px;
+    }
+
+    .issue-card,.service-card,.flow-card,.point-card,.trust-card{
+      background:rgba(255,255,255,.03);
+      border:1px solid rgba(201,168,76,.14);
+      border-radius:20px;
+      padding:24px;
+    }
+
+    .issue-card strong,
+    .service-card strong,
+    .flow-card strong,
+    .point-card strong,
+    .trust-card strong{
+      display:block;
+      color:var(--gold-soft);
+      margin-bottom:8px;
+      font-size:18px;
+    }
+
+    .services{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:18px;
+      margin-top:32px;
+    }
+
+    .service-card{
+      background:linear-gradient(180deg, rgba(255,255,255,.04) 0%, rgba(255,255,255,.025) 100%);
+    }
+
+    .difference-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+      margin-top:32px;
+    }
+
+    .trust-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:18px;
+      margin-top:32px;
+    }
+
+    .flow{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+      margin-top:32px;
+    }
+
+    .num{
+      width:42px;
+      height:42px;
+      border-radius:999px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:rgba(201,168,76,.12);
+      color:var(--gold-soft);
+      font-weight:800;
+      margin-bottom:14px;
+      border:1px solid rgba(201,168,76,.22);
+    }
+
+    .cta-box{
+      padding:34px;
+      border-radius:28px;
+      border:1px solid rgba(201,168,76,.18);
+      background:
+        radial-gradient(circle at top right, rgba(201,168,76,.10), transparent 30%),
+        linear-gradient(180deg, rgba(255,255,255,.04) 0%, rgba(255,255,255,.03) 100%);
+      text-align:center;
+      max-width:860px;
+      margin:0 auto;
+    }
+
+    .cta-box p{
+      max-width:680px;
+      margin:0 auto 20px;
+    }
+
+    .footer{
+      padding:28px 0 40px;
+      border-top:1px solid rgba(201,168,76,.12);
+      background:#061224;
+    }
+
+    .footer-inner{
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      flex-wrap:wrap;
+      color:var(--gray);
+      font-size:14px;
+    }
+
+    @media (max-width: 960px){
+      .hero-grid,
+      .issues,
+      .services,
+      .difference-grid,
+      .trust-grid,
+      .flow{
+        grid-template-columns:1fr;
+      }
+
+      .hero-points{
+        grid-template-columns:1fr;
+      }
+
+      .header-inner{
+        align-items:flex-start;
+        padding:14px 0;
+      }
+
+      .nav{
+        gap:10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="brand-en">Royal Blue LLC.</div>
+        <div class="brand-ja">合同会社ロイヤルブルー</div>
+      </div>
+      <nav class="nav">
+        <a href="#service">サービス</a>
+        <a href="#difference">強み</a>
+        <a href="#flow">導入の流れ</a>
+        <a href="#contact" class="btn btn-primary">無料相談</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow">Sales Growth / Cost Optimization / Human Development</div>
+          <h1 class="hero-title">戦略だけで終わらせない。<br><span>売上を伸ばす実行支援</span>を。</h1>
+          <p class="lead">
+            Royal Blue LLC.は、中小企業向けに
+            <strong>売上支援・コスト削減・人材育成</strong>を一気通貫で支援します。
+            机上の空論ではなく、現場で動く仕組みづくりまで伴走します。
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary">無料相談を申し込む</a>
+            <a href="#service" class="btn btn-secondary">サービスを見る</a>
+          </div>
+
+          <div class="hero-points">
+            <div class="mini-card">
+              <strong>売上支援</strong>
+              提案力・導線・営業体制の見直し
+            </div>
+            <div class="mini-card">
+              <strong>コスト削減</strong>
+              固定費・業務負荷・無駄の最適化
+            </div>
+            <div class="mini-card">
+              <strong>人材育成</strong>
+              AI・DXを含む再現性ある育成
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-panel">
+          <div class="hero-panel-title">こんなお悩みに対応</div>
+          <div class="hero-list">
+            <div>売上が伸び悩んでいる</div>
+            <div>コスト構造を見直したい</div>
+            <div>人材が育たず属人化している</div>
+            <div>AIやDXを導入したいが進まない</div>
+            <div>戦略から実行まで任せたい</div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section-dark">
+      <div class="container">
+        <div class="center-text">
+          <div class="eyebrow">Issues</div>
+          <h2>このようなお悩みはありませんか？</h2>
+          <p class="muted">
+            多くの企業が、売上・コスト・人材の3つの課題を同時に抱えています。
+            ひとつずつ対処しても、全体が噛み合わなければ成果は伸びません。
+          </p>
+        </div>
+
+        <div class="issues">
+          <div class="issue-card">
+            <strong>売上が伸びない</strong>
+            商品やサービスに自信はあるのに、提案方法や導線設計が弱く、商談化・成約率が上がらない。
+          </div>
+          <div class="issue-card">
+            <strong>コストが重い</strong>
+            固定費や運用コストが積み上がり、利益が残りにくい状態になっている。
+          </div>
+          <div class="issue-card">
+            <strong>人材が育たない</strong>
+            教育が属人的で、担当者が変わると品質が落ちる。再現性がない。
+          </div>
+          <div class="issue-card">
+            <strong>改善が続かない</strong>
+            一時的に整っても、実行と定着の仕組みがなく、結局元に戻ってしまう。
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="service" class="section section-soft">
+      <div class="container">
+        <div class="center-text">
+          <div class="eyebrow">Service</div>
+          <h2>Royal Blueの支援内容</h2>
+          <p class="muted">
+            部分最適ではなく、経営全体を見ながら必要な打ち手を組み合わせます。
+          </p>
+        </div>
+
+        <div class="services">
+          <div class="service-card">
+            <strong>売上支援</strong>
+            営業導線の整理、提案内容の磨き込み、見込み顧客へのアプローチ設計まで支援します。
+          </div>
+          <div class="service-card">
+            <strong>コスト削減支援</strong>
+            業務の見直し、固定費の最適化、無駄な工程の削減により利益体質を整えます。
+          </div>
+          <div class="service-card">
+            <strong>AI・DX導入支援</strong>
+            AI活用、業務自動化、Lark等の導入支援を通じて、現場で使えるDXを実装します。
+          </div>
+          <div class="service-card">
+            <strong>人材育成</strong>
+            属人化を減らし、現場で成果につながる育成設計・教育フローづくりを支援します。
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="difference" class="section section-dark">
+      <div class="container">
+        <div class="center-text">
+          <div class="eyebrow">Difference</div>
+          <h2>他社との違い</h2>
+          <p class="muted">
+            ただ提案するだけではなく、実行・定着まで見据えて伴走します。
+          </p>
+        </div>
+
+        <div class="difference-grid">
+          <div class="point-card">
+            <strong>戦略だけで終わらない</strong>
+            方向性を示すだけでなく、現場で回る形まで落とし込みます。
+          </div>
+          <div class="point-card">
+            <strong>一気通貫で支援</strong>
+            売上・コスト・人材を分断せず、経営全体を見て最適化します。
+          </div>
+          <div class="point-card">
+            <strong>AI × 人の実務設計</strong>
+            AI任せでも人任せでもなく、成果につながる現実的な運用を構築します。
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container">
+        <div class="center-text">
+          <div class="eyebrow">Trust</div>
+          <h2>このような企業様に選ばれます</h2>
+          <p class="muted">
+            スピード感を持って改善したい企業様、外部の実務支援パートナーを求める企業様に適しています。
+          </p>
+        </div>
+
+        <div class="trust-grid">
+          <div class="trust-card">
+            <strong>中小企業経営者</strong>
+            売上や利益を伸ばしたいが、何から着手すべきか整理したい。
+          </div>
+          <div class="trust-card">
+            <strong>法人担当者</strong>
+            AIやDXを進めたいが、社内だけでは前に進みにくい。
+          </div>
+          <div class="trust-card">
+            <strong>事業責任者</strong>
+            戦略・運用・育成をまとめて見直し、再現性を高めたい。
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="flow" class="section section-dark">
+      <div class="container">
+        <div class="center-text">
+          <div class="eyebrow">Flow</div>
+          <h2>導入の流れ</h2>
+          <p class="muted">
+            まずは現状を整理し、優先順位を明確にした上で進めます。
+          </p>
+        </div>
+
+        <div class="flow">
+          <div class="flow-card">
+            <div class="num">01</div>
+            <strong>無料相談</strong>
+            現状のお悩みや課題感をお伺いします。
+          </div>
+          <div class="flow-card">
+            <div class="num">02</div>
+            <strong>診断・整理</strong>
+            売上・コスト・人材面の現状を整理します。
+          </div>
+          <div class="flow-card">
+            <div class="num">03</div>
+            <strong>ご提案</strong>
+            優先順位に応じた改善プランをご提示します。
+          </div>
+          <div class="flow-card">
+            <div class="num">04</div>
+            <strong>導入・伴走</strong>
+            実行フェーズまで支援し、定着を目指します。
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-soft">
+      <div class="container">
+        <div class="cta-box">
+          <div class="eyebrow">Contact</div>
+          <h2>まずは無料相談から</h2>
+          <p>
+            いきなり導入を決める必要はありません。  
+            まずは現状整理からでも大丈夫です。お気軽にご相談ください。
+          </p>
+          <div class="hero-actions" style="justify-content:center;">
+            <a href="mailto:info@example.com" class="btn btn-primary">メールで相談する</a>
+            <a href="https://line.me/" class="btn btn-secondary">LINEで相談する</a>
+          </div>
+          <p class="muted" style="margin-top:18px;font-size:14px;">
+            ※ メールアドレス・LINE URLは後で実際のものに差し替えてください
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>Royal Blue LLC. / 合同会社ロイヤルブルー</div>
+      <div>売上支援・コスト削減・人材育成の一気通貫支援</div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -3,52 +3,234 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Royal AI</title>
+  <title>Royal AI | Royal Blue LLC.</title>
+  <meta name="description" content="Royal AIは、合同会社ロイヤルブルーと連携したAIソリューションサービスです。" />
   <style>
-    body{margin:0;font-family:sans-serif;background:#071428;color:#fff;text-align:center}
-    section{padding:40px 20px}
-    .btn{display:inline-block;margin-top:20px;padding:12px 20px;background:#c9a84c;color:#000;text-decoration:none;border-radius:8px}
+    :root{
+      --navy:#071428;
+      --navy2:#0d1d33;
+      --gold:#c9a84c;
+      --gold-soft:#e2c978;
+      --white:#f7f8fb;
+      --muted:rgba(247,248,251,.76);
+      --line:rgba(201,168,76,.22);
+      --shadow:0 20px 60px rgba(0,0,0,.28);
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:
+        radial-gradient(circle at top right, rgba(201,168,76,.08), transparent 22%),
+        linear-gradient(180deg, var(--navy) 0%, #08192f 100%);
+      color:var(--white);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP",sans-serif;
+      line-height:1.85;
+      letter-spacing:.02em;
+    }
+    a{text-decoration:none;color:inherit}
+    .container{width:min(calc(100% - 32px), var(--max));margin:0 auto}
+    .section{padding:86px 0}
+    .section-tight{padding:64px 0}
+    .center{text-align:center}
+    .muted{color:var(--muted)}
+    .header{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:blur(12px);
+      background:rgba(7,20,40,.72);
+      border-bottom:1px solid rgba(201,168,76,.12);
+    }
+    .header-inner{
+      min-height:76px;
+      display:flex;justify-content:space-between;align-items:center;gap:16px;
+    }
+    .brand-en{font-size:18px;font-weight:800;color:var(--gold-soft);letter-spacing:.08em}
+    .brand-ja{font-size:12px;color:var(--muted)}
+    .nav{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+    .nav a{font-size:14px}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      min-height:52px;padding:0 24px;border-radius:999px;font-weight:800;
+      border:1px solid transparent;transition:.2s ease;
+    }
+    .btn-primary{background:var(--gold);color:#071428;box-shadow:0 12px 30px rgba(201,168,76,.18)}
+    .btn-secondary{background:transparent;color:var(--white);border-color:var(--line)}
+    .btn:hover{transform:translateY(-1px)}
+    .hero{padding:108px 0 92px}
+    .eyebrow{
+      display:inline-block;margin-bottom:18px;font-size:12px;font-weight:700;
+      letter-spacing:.18em;text-transform:uppercase;color:var(--gold-soft)
+    }
+    h1{
+      margin:0 auto 18px;max-width:860px;text-align:center;
+      font-size:clamp(34px,6vw,66px);line-height:1.18;font-weight:900;
+    }
+    h2{
+      margin:0 0 18px;text-align:center;color:var(--gold-soft);
+      font-size:clamp(28px,4vw,42px);line-height:1.3;font-weight:900;
+    }
+    h3{margin:0 0 10px;color:var(--gold-soft);font-size:20px}
+    p{margin:0 0 14px}
+    .lead{
+      max-width:760px;margin:0 auto;text-align:center;
+      color:#edf2fa;font-size:clamp(16px,2vw,21px)
+    }
+    .hero-actions{
+      margin-top:34px;display:flex;justify-content:center;gap:14px;flex-wrap:wrap
+    }
+    .line{
+      width:90px;height:2px;margin:28px auto 0;
+      background:linear-gradient(90deg, transparent 0%, var(--gold) 50%, transparent 100%);
+      border-radius:999px;
+    }
+    .grid-3{
+      display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:36px
+    }
+    .grid-2{
+      display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:36px
+    }
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.02));
+      border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:var(--shadow)
+    }
+    .bullet{
+      max-width:860px;margin:30px auto 0;display:grid;gap:14px
+    }
+    .bullet-item{
+      padding:18px 20px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.025)
+    }
+    .cta-wrap{
+      max-width:900px;margin:0 auto;padding:42px 28px;border:1px solid var(--line);
+      border-radius:30px;background:
+      radial-gradient(circle at top right, rgba(201,168,76,.10), transparent 28%),
+      linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.025));
+      text-align:center;box-shadow:var(--shadow)
+    }
+    .footer{
+      padding:34px 0 42px;border-top:1px solid rgba(201,168,76,.12);background:#061121
+    }
+    .footer p{margin:6px 0;text-align:center;color:var(--muted);font-size:14px}
+    @media (max-width:960px){
+      .grid-2,.grid-3{grid-template-columns:1fr}
+      .header-inner{padding:14px 0;align-items:flex-start}
+      .nav{gap:10px}
+    }
   </style>
 </head>
 <body>
 
-<section>
-  <h1>Royal AI</h1>
-  <p>
-    最短7日で御社専用AIを構築<br>
-    営業・業務を自動化し、売上最大化へ
-  </p>
-</section>
+  <header class="header">
+    <div class="container header-inner">
+      <div>
+        <div class="brand-en">ROYAL AI</div>
+        <div class="brand-ja">Royal Blue LLC. 連携サービス</div>
+      </div>
+      <nav class="nav">
+        <a href="#about">概要</a>
+        <a href="#service">機能</a>
+        <a href="#contact" class="btn btn-primary">無料相談</a>
+      </nav>
+    </div>
+  </header>
 
-<section>
-  <h2>こんなお悩みありませんか？</h2>
-  <ul style="list-style:none;padding:0;">
-    <li>提案資料作成に時間がかかる</li>
-    <li>営業効率が悪い</li>
-    <li>人手不足で業務が回らない</li>
-  </ul>
-</section>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="eyebrow">Execution Device of Royal Blue</div>
+        <h1>勝ち筋を、実装する。</h1>
+        <p class="lead">
+          Royal AIは、合同会社ロイヤルブルーの設計思想を<br>
+          実務に落とし込むためのAIソリューションサービスです。
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">無料相談はこちら</a>
+          <a href="index.html" class="btn btn-secondary">Royal Blueへ戻る</a>
+        </div>
+        <div class="line"></div>
+      </div>
+    </section>
 
-<section>
-  <h2>Royal AIとは</h2>
-  <p>
-    Royal AIは、合同会社ロイヤルブルーと連携したAIソリューションサービスです。
-  </p>
-</section>
+    <section class="section-tight">
+      <div class="container">
+        <h2>こんなお悩みありませんか？</h2>
+        <div class="bullet">
+          <div class="bullet-item">提案資料作成に時間がかかる</div>
+          <div class="bullet-item">営業効率が悪く、属人化している</div>
+          <div class="bullet-item">人手不足で業務が回らない</div>
+          <div class="bullet-item">AIを使いたいが、何から始めればいいか分からない</div>
+        </div>
+      </div>
+    </section>
 
-<section>
-  <h2>サービス内容</h2>
-  <ul style="list-style:none;padding:0;">
-    <li>営業提案AI</li>
-    <li>売れ筋分析AI</li>
-    <li>業務自動化AI</li>
-  </ul>
-</section>
+    <section id="about" class="section">
+      <div class="container">
+        <h2>Royal AIとは</h2>
+        <p class="lead">
+          Royal AIは、合同会社ロイヤルブルーと連携したAIソリューションサービスです。<br>
+          AIそのものを売るのではなく、営業・業務・意思決定を前に進めるための実装手段として提供します。
+        </p>
+      </div>
+    </section>
 
-<section>
-  <h2>まずは無料相談</h2>
-  <a href="#" class="btn">LINEで相談する</a>
-</section>
+    <section id="service" class="section-tight">
+      <div class="container">
+        <h2>提供機能</h2>
+        <div class="grid-3">
+          <div class="card">
+            <h3>営業提案AI</h3>
+            <p>企業情報や要件に応じて、提案の土台を高速で整理します。</p>
+          </div>
+          <div class="card">
+            <h3>売れ筋分析AI</h3>
+            <p>過去データや傾向をもとに、売れる可能性の高い打ち手を可視化します。</p>
+          </div>
+          <div class="card">
+            <h3>業務自動化AI</h3>
+            <p>定型業務を自動化し、人が本来集中すべき業務へ時間を戻します。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-tight">
+      <div class="container">
+        <h2>導入イメージ</h2>
+        <div class="grid-2">
+          <div class="card">
+            <h3>営業の高速化</h3>
+            <p>提案準備の工数を削減し、営業担当者が本来の商談に集中できる状態をつくります。</p>
+          </div>
+          <div class="card">
+            <h3>業務の省力化</h3>
+            <p>定型作業の自動化により、少人数でも回る体制を目指します。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="cta-wrap">
+          <h2>まずは無料相談から</h2>
+          <p class="lead" style="max-width:700px;">
+            御社の課題に対して、Royal AIで何を自動化し、何を強化できるかを整理してご提案します。
+          </p>
+          <div class="hero-actions">
+            <a href="https://line.me/" class="btn btn-primary">LINEで相談する</a>
+            <a href="index.html" class="btn btn-secondary">Royal Blueへ戻る</a>
+          </div>
+          <p class="muted" style="margin-top:16px;">※ LINEリンクは後から正式URLに差し替えてください</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Royal AI</p>
+      <p>合同会社ロイヤルブルー 連携サービス</p>
+    </div>
+  </footer>
 
 </body>
 </html>

@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>合同会社ロイヤルブルー | 企業の階級を引き上げる設計会社</title>
   <meta name="description" content="合同会社ロイヤルブルーは、戦略・営業・DX・AIを統合し、企業の利益構造と格を引き上げる設計会社です。" />
+
   <style>
     :root{
       --navy:#071428;
+      --navy2:#0b1d35;
       --gold:#c9a84c;
       --gold-soft:#e2c978;
       --white:#f7f8fb;
@@ -20,13 +22,15 @@
     *{box-sizing:border-box}
     body{
       margin:0;
-      background:linear-gradient(180deg, #071428 0%, #08192f 100%);
+      background:linear-gradient(180deg,var(--navy) 0%,#08192f 100%);
       color:var(--white);
       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP",sans-serif;
-      line-height:1.85;
+      line-height:1.8;
     }
 
-    .container{width:min(calc(100% - 32px), var(--max));margin:0 auto}
+    a{text-decoration:none;color:inherit}
+
+    .container{width:min(calc(100% - 32px),var(--max));margin:0 auto}
     .section{padding:80px 0}
     .section-tight{padding:60px 0}
     .center{text-align:center}
@@ -36,6 +40,7 @@
       position:sticky;top:0;
       background:rgba(7,20,40,.9);
       border-bottom:1px solid rgba(201,168,76,.1);
+      z-index:10;
     }
 
     .header-inner{
@@ -46,36 +51,33 @@
     .brand-en{color:var(--gold-soft);font-weight:800}
     .brand-ja{font-size:12px;color:var(--muted)}
 
-    .nav{display:flex;gap:16px}
+    .nav{display:flex;gap:16px;font-size:14px}
 
     .btn{
-      padding:14px 24px;border-radius:999px;
+      padding:14px 26px;
+      border-radius:999px;
       font-weight:800;
       display:inline-block;
     }
 
     .btn-primary{
-      background:var(--gold);color:#071428;
+      background:var(--gold);
+      color:#071428;
     }
 
     .btn-secondary{
       border:1px solid var(--line);
     }
 
-    h1{
-      text-align:center;
-      font-size:42px;
-    }
-
-    h2{
-      text-align:center;
-      color:var(--gold-soft);
-      margin-bottom:20px;
-    }
+    h1{text-align:center;font-size:42px}
+    h2{text-align:center;color:var(--gold-soft)}
+    h3{margin-bottom:10px}
 
     .lead{
       text-align:center;
       color:var(--muted);
+      max-width:720px;
+      margin:0 auto;
     }
 
     .grid-2{
@@ -87,7 +89,7 @@
 
     .grid-4{
       display:grid;
-      grid-template-columns:1fr 1fr 1fr 1fr;
+      grid-template-columns:repeat(4,1fr);
       gap:20px;
       margin-top:30px;
     }
@@ -95,27 +97,36 @@
     .card{
       border:1px solid var(--line);
       border-radius:20px;
-      padding:20px;
+      padding:24px;
       background:rgba(255,255,255,.03);
+      box-shadow:var(--shadow);
     }
 
     .quote-box{
       margin-top:30px;
       padding:30px;
       border:1px solid var(--line);
-      text-align:center;
       border-radius:20px;
+      text-align:center;
+    }
+
+    .cta{
+      margin-top:40px;
+      text-align:center;
     }
 
     .footer{
       padding:30px;
       text-align:center;
       border-top:1px solid rgba(201,168,76,.1);
+      font-size:14px;
+      color:var(--muted);
     }
 
     @media(max-width:900px){
       .grid-2,.grid-4{grid-template-columns:1fr}
     }
+
   </style>
 </head>
 
@@ -131,6 +142,7 @@
       <a href="#about">思想</a>
       <a href="#service">事業</a>
       <a href="#case">事例</a>
+      <a href="#contact">相談</a>
     </nav>
   </div>
 </header>
@@ -142,8 +154,11 @@
     <h1>企業の階級を引き上げる。</h1>
     <p class="lead">
       戦略・営業・DX・AIを統合し、<br>
-      利益構造と格を引き上げる設計会社
+      企業の利益構造と格を引き上げる設計会社
     </p>
+    <div class="cta">
+      <a href="#contact" class="btn btn-primary">無料相談はこちら</a>
+    </div>
   </div>
 </section>
 
@@ -171,7 +186,7 @@
 
     <p class="lead">
       成果は努力ではなく構造で決まります。<br>
-      ロイヤルブルーは、その構造を設計します。
+      私たちはその構造を設計し、実行まで伴走します。
     </p>
 
   </div>
@@ -190,18 +205,18 @@
       </div>
 
       <div class="card">
-        <h3>現場で使える</h3>
+        <h3>現場で使える設計</h3>
         <p>実務レベルまで落とし込む</p>
       </div>
 
       <div class="card">
         <h3>オーダーメイド</h3>
-        <p>テンプレは使わない</p>
+        <p>テンプレートは使わない</p>
       </div>
 
       <div class="card">
         <h3>利益直結</h3>
-        <p>売上と効率を両立</p>
+        <p>売上と効率を最大化</p>
       </div>
 
     </div>
@@ -215,21 +230,10 @@
 
     <div class="grid-4">
 
-      <div class="card">
-        <h3>営業支援</h3>
-      </div>
-
-      <div class="card">
-        <h3>コスト削減</h3>
-      </div>
-
-      <div class="card">
-        <h3>DX</h3>
-      </div>
-
-      <div class="card">
-        <h3>AI導入</h3>
-      </div>
+      <div class="card"><h3>営業支援</h3></div>
+      <div class="card"><h3>コスト削減</h3></div>
+      <div class="card"><h3>DX支援</h3></div>
+      <div class="card"><h3>AI導入</h3></div>
 
     </div>
   </div>
@@ -243,25 +247,62 @@
     <div class="grid-2">
 
       <div class="card">
-        <h3>モリックス</h3>
-        <p>投資・提案の設計を再構築</p>
+        <h3>モリックス案件</h3>
+        <p>
+          <strong>課題：</strong><br>
+          技術価値が伝わらず商談が進まない<br><br>
+          <strong>変化：</strong><br>
+          投資・提案構造を再設計し判断を加速
+        </p>
       </div>
 
       <div class="card">
-        <h3>ステライザー</h3>
-        <p>営業導線と訴求設計を改善</p>
+        <h3>ステライザー案件</h3>
+        <p>
+          <strong>課題：</strong><br>
+          営業が属人化し再現性がない<br><br>
+          <strong>変化：</strong><br>
+          誰でも売れる営業導線へ改善
+        </p>
       </div>
 
       <div class="card">
-        <h3>リスキリング</h3>
-        <p>補助金×提案構造を最適化</p>
+        <h3>リスキリング案件</h3>
+        <p>
+          <strong>課題：</strong><br>
+          教育の価値が伝わらない<br><br>
+          <strong>変化：</strong><br>
+          補助金×提案で意思決定を加速
+        </p>
       </div>
 
       <div class="card">
-        <h3>LED</h3>
-        <p>コスト削減提案を再設計</p>
+        <h3>LED導入案件</h3>
+        <p>
+          <strong>課題：</strong><br>
+          価格比較だけで終わる<br><br>
+          <strong>変化：</strong><br>
+          導入メリットを再設計し決断を促進
+        </p>
       </div>
 
+    </div>
+
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="container center">
+
+    <h2>まずはご相談ください</h2>
+
+    <p class="lead">
+      現状の課題を整理し、最適な構造をご提案します。<br>
+      無料相談は下記よりお問い合わせください。
+    </p>
+
+    <div class="cta">
+      <a href="#" class="btn btn-primary">無料相談する</a>
     </div>
 
   </div>

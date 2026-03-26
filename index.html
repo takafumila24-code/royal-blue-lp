@@ -1,318 +1,208 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>合同会社ロイヤルブルー | 企業の階級を引き上げる設計会社</title>
-  <meta name="description" content="合同会社ロイヤルブルーは、戦略・営業・DX・AIを統合し、企業の利益構造と格を引き上げる設計会社です。" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>合同会社ロイヤルブルー | 企業の階級を引き上げる設計会社</title>
 
-  <style>
-    :root{
-      --navy:#071428;
-      --navy2:#0b1d35;
-      --gold:#c9a84c;
-      --gold-soft:#e2c978;
-      --white:#f7f8fb;
-      --muted:rgba(247,248,251,.74);
-      --line:rgba(201,168,76,.22);
-      --shadow:0 20px 60px rgba(0,0,0,.28);
-      --max:1180px;
-    }
+<style>
+:root{
+--navy:#071428;
+--gold:#c9a84c;
+--gold-soft:#e2c978;
+--white:#f7f8fb;
+--muted:rgba(247,248,251,.7);
+--line:rgba(201,168,76,.2);
+--max:1100px;
+}
 
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      background:linear-gradient(180deg,var(--navy) 0%,#08192f 100%);
-      color:var(--white);
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans JP",sans-serif;
-      line-height:1.8;
-    }
+body{
+margin:0;
+background:linear-gradient(180deg,#071428,#08192f);
+color:var(--white);
+font-family:-apple-system,"Noto Sans JP",sans-serif;
+line-height:1.9;
+}
 
-    a{text-decoration:none;color:inherit}
+.container{width:min(92%,var(--max));margin:auto}
+.section{padding:90px 0}
+.center{text-align:center}
 
-    .container{width:min(calc(100% - 32px),var(--max));margin:0 auto}
-    .section{padding:80px 0}
-    .section-tight{padding:60px 0}
-    .center{text-align:center}
-    .gold{color:var(--gold-soft)}
+h1{
+font-size:42px;
+text-align:center;
+margin-bottom:20px;
+}
 
-    .header{
-      position:sticky;top:0;
-      background:rgba(7,20,40,.9);
-      border-bottom:1px solid rgba(201,168,76,.1);
-      z-index:10;
-    }
+h2{
+text-align:center;
+color:var(--gold-soft);
+margin-bottom:20px;
+}
 
-    .header-inner{
-      display:flex;justify-content:space-between;align-items:center;
-      padding:16px 0;
-    }
+.lead{
+text-align:center;
+color:var(--muted);
+max-width:700px;
+margin:auto;
+}
 
-    .brand-en{color:var(--gold-soft);font-weight:800}
-    .brand-ja{font-size:12px;color:var(--muted)}
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:24px;
+margin-top:40px;
+}
 
-    .nav{display:flex;gap:16px;font-size:14px}
+.card{
+border:1px solid var(--line);
+border-radius:20px;
+padding:26px;
+background:rgba(255,255,255,.03);
+}
 
-    .btn{
-      padding:14px 26px;
-      border-radius:999px;
-      font-weight:800;
-      display:inline-block;
-    }
+.quote{
+text-align:center;
+margin-top:30px;
+padding:30px;
+border:1px solid var(--line);
+border-radius:20px;
+}
 
-    .btn-primary{
-      background:var(--gold);
-      color:#071428;
-    }
+.btn{
+display:inline-block;
+padding:14px 26px;
+border-radius:999px;
+background:var(--gold);
+color:#071428;
+font-weight:700;
+margin-top:20px;
+}
 
-    .btn-secondary{
-      border:1px solid var(--line);
-    }
+footer{
+text-align:center;
+padding:40px;
+color:var(--muted);
+border-top:1px solid rgba(201,168,76,.1);
+}
 
-    h1{text-align:center;font-size:42px}
-    h2{text-align:center;color:var(--gold-soft)}
-    h3{margin-bottom:10px}
-
-    .lead{
-      text-align:center;
-      color:var(--muted);
-      max-width:720px;
-      margin:0 auto;
-    }
-
-    .grid-2{
-      display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:20px;
-      margin-top:30px;
-    }
-
-    .grid-4{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:20px;
-      margin-top:30px;
-    }
-
-    .card{
-      border:1px solid var(--line);
-      border-radius:20px;
-      padding:24px;
-      background:rgba(255,255,255,.03);
-      box-shadow:var(--shadow);
-    }
-
-    .quote-box{
-      margin-top:30px;
-      padding:30px;
-      border:1px solid var(--line);
-      border-radius:20px;
-      text-align:center;
-    }
-
-    .cta{
-      margin-top:40px;
-      text-align:center;
-    }
-
-    .footer{
-      padding:30px;
-      text-align:center;
-      border-top:1px solid rgba(201,168,76,.1);
-      font-size:14px;
-      color:var(--muted);
-    }
-
-    @media(max-width:900px){
-      .grid-2,.grid-4{grid-template-columns:1fr}
-    }
-
-  </style>
+@media(max-width:800px){
+.grid{grid-template-columns:1fr}
+}
+</style>
 </head>
 
 <body>
 
-<header class="header">
-  <div class="container header-inner">
-    <div>
-      <div class="brand-en">ROYAL BLUE LLC.</div>
-      <div class="brand-ja">合同会社ロイヤルブルー</div>
-    </div>
-    <nav class="nav">
-      <a href="#about">思想</a>
-      <a href="#service">事業</a>
-      <a href="#case">事例</a>
-      <a href="#contact">相談</a>
-    </nav>
-  </div>
-</header>
-
-<main>
+<section class="section">
+<div class="container">
+<h1>企業の階級を引き上げる。</h1>
+<p class="lead">
+戦略・営業・DX・AIを統合し、<br>
+企業の利益構造を再設計する。
+</p>
+<div class="center">
+<a href="#contact" class="btn">無料相談</a>
+</div>
+</div>
+</section>
 
 <section class="section">
-  <div class="container">
-    <h1>企業の階級を引き上げる。</h1>
-    <p class="lead">
-      戦略・営業・DX・AIを統合し、<br>
-      企業の利益構造と格を引き上げる設計会社
-    </p>
-    <div class="cta">
-      <a href="#contact" class="btn btn-primary">無料相談はこちら</a>
-    </div>
-  </div>
+<div class="container">
+
+<h2>合同会社ロイヤルブルーとは</h2>
+
+<p class="lead">
+企業の勝ち方は、構造で決まる。<br>
+私たちは、その構造を設計する。
+</p>
+
+<div class="quote">
+企業の階級を引き上げる。
+</div>
+
+</div>
 </section>
 
-<section id="about" class="section">
-  <div class="container">
+<section class="section">
+<div class="container">
 
-    <h2>合同会社ロイヤルブルーとは</h2>
+<h2>選ばれる理由</h2>
 
-    <p class="lead">
-      戦略・営業・DX・AIを統合し、<br>
-      企業の勝ち方そのものを設計する会社です。
-    </p>
+<div class="grid">
 
-    <div class="quote-box">
-      <strong>企業の階級を引き上げる。</strong>
-    </div>
+<div class="card">戦略から実行まで一貫</div>
+<div class="card">現場で機能する設計</div>
+<div class="card">オーダーメイド支援</div>
+<div class="card">利益に直結</div>
 
-  </div>
+</div>
+
+</div>
 </section>
 
-<section class="section-tight">
-  <div class="container">
+<section class="section">
+<div class="container">
 
-    <h2>代表メッセージ</h2>
+<h2>導入事例</h2>
 
-    <p class="lead">
-      成果は努力ではなく構造で決まります。<br>
-      私たちはその構造を設計し、実行まで伴走します。
-    </p>
+<div class="grid">
 
-  </div>
-</section>
+<div class="card">
+製造業 / セキュリティ<br><br>
+管理の曖昧さにより信頼性に課題。<br>
+構造を再設計し可視化。<br><br>
+信頼性が向上し、取引機会が拡大。
+</div>
 
-<section class="section-tight">
-  <div class="container">
+<div class="card">
+サービス業 / 衛生<br><br>
+安心感の欠如により顧客離脱。<br>
+環境と訴求を再設計。<br><br>
+利用率・売上が改善。
+</div>
 
-    <h2>選ばれる理由</h2>
+<div class="card">
+IT企業 / 人材<br><br>
+教育の属人化により成長停滞。<br>
+教育構造を再設計。<br><br>
+生産性が向上。
+</div>
 
-    <div class="grid-2">
+<div class="card">
+中小企業 / コスト<br><br>
+電力コストが利益を圧迫。<br>
+構造を見直し最適化。<br><br>
+利益率が改善。
+</div>
 
-      <div class="card">
-        <h3>戦略から実行まで一貫</h3>
-        <p>分断せず一つの構造として設計</p>
-      </div>
+</div>
 
-      <div class="card">
-        <h3>現場で使える設計</h3>
-        <p>実務レベルまで落とし込む</p>
-      </div>
+<p class="lead" style="margin-top:40px;">
+課題は異なっても、本質は同じです。<br>
+ロイヤルブルーは、企業の構造を設計します。
+</p>
 
-      <div class="card">
-        <h3>オーダーメイド</h3>
-        <p>テンプレートは使わない</p>
-      </div>
-
-      <div class="card">
-        <h3>利益直結</h3>
-        <p>売上と効率を最大化</p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<section id="service" class="section">
-  <div class="container">
-    <h2>事業内容</h2>
-
-    <div class="grid-4">
-
-      <div class="card"><h3>営業支援</h3></div>
-      <div class="card"><h3>コスト削減</h3></div>
-      <div class="card"><h3>DX支援</h3></div>
-      <div class="card"><h3>AI導入</h3></div>
-
-    </div>
-  </div>
-</section>
-
-<section id="case" class="section">
-  <div class="container">
-
-    <h2>ご相談事例</h2>
-
-    <div class="grid-2">
-
-      <div class="card">
-        <h3>モリックス案件</h3>
-        <p>
-          <strong>課題：</strong><br>
-          技術価値が伝わらず商談が進まない<br><br>
-          <strong>変化：</strong><br>
-          投資・提案構造を再設計し判断を加速
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>ステライザー案件</h3>
-        <p>
-          <strong>課題：</strong><br>
-          営業が属人化し再現性がない<br><br>
-          <strong>変化：</strong><br>
-          誰でも売れる営業導線へ改善
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>リスキリング案件</h3>
-        <p>
-          <strong>課題：</strong><br>
-          教育の価値が伝わらない<br><br>
-          <strong>変化：</strong><br>
-          補助金×提案で意思決定を加速
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>LED導入案件</h3>
-        <p>
-          <strong>課題：</strong><br>
-          価格比較だけで終わる<br><br>
-          <strong>変化：</strong><br>
-          導入メリットを再設計し決断を促進
-        </p>
-      </div>
-
-    </div>
-
-  </div>
+</div>
 </section>
 
 <section id="contact" class="section">
-  <div class="container center">
+<div class="container center">
 
-    <h2>まずはご相談ください</h2>
+<h2>ご相談ください</h2>
 
-    <p class="lead">
-      現状の課題を整理し、最適な構造をご提案します。<br>
-      無料相談は下記よりお問い合わせください。
-    </p>
+<p class="lead">
+御社の課題に応じた最適な構造をご提案します。
+</p>
 
-    <div class="cta">
-      <a href="#" class="btn btn-primary">無料相談する</a>
-    </div>
+<a href="https://line.me/" class="btn">無料相談する</a>
 
-  </div>
+</div>
 </section>
 
-</main>
-
-<footer class="footer">
-  <p>合同会社ロイヤルブルー</p>
-  <p>企業の階級を引き上げる設計会社</p>
+<footer>
+合同会社ロイヤルブルー<br>
+企業の階級を引き上げる設計会社
 </footer>
 
 </body>
